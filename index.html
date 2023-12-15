@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Numbers</title>
+    <style> /* CSS */
+        body{
+            font: normal 12pt arial; 
+        }  
+        input{                              
+            font: normal 12pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body> <!--HTML-->
+    <h1>Adding Values</h1>
+    <input type='number' name='txtn1' id='txtn1'>     
+    <input type='number' name='txtn2' id='txtn2'>  
+    <input type='button' value='Result' onclick='sum()'>
+    <div id='res'>Result</div>           
+    <script> // JavaScript
+        function sum() {
+            let textOne = window.document.querySelector('input#txtn1')
+            let textTwo = window.document.querySelector('input#txtn2')
+            let res = window.document.querySelector('div#res')       
+            var numOne = Number(textOne.value)
+            var numTwo = Number(textTwo.value)
+            var sumTot = numOne + numTwo
+            res.innerHTML = `The sum between ${numOne} + ${numTwo} = <strong> ${sumTot}</strong>`
+        }
+    </script>
+</body>
+</html>
